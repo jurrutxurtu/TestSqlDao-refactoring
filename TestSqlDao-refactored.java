@@ -17,11 +17,6 @@ import java.util.stream.Collectors;
 public class TestSqlDao
 {
     
-    private TestSqlDao()
-    {
-        
-    }
-
     /**
      * Obtiene el ID del último pedido para cada usuario
      * 
