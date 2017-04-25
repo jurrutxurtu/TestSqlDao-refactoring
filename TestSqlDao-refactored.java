@@ -30,7 +30,7 @@ public class TestSqlDao
         ResultSet rs = stmt.executeQuery();
         Hashtable<Long, Long> maxOrderUser = new Hashtable<Long, Long>();
 
-        while (rs.next())
+        if (rs.first())
         {
             long idPedido = rs.getInt("ID_PEDIDO");
             long idUsuario = rs.getInt("ID_USUARIO");
