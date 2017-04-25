@@ -21,7 +21,7 @@ public class TestSqlDao
      * Obtiene el ID del último pedido para cada usuario
      * 
      */
-    public Hashtable<Long, Long> getStoreUsersLastOrderId(long idTienda) throws SQLException
+    public Hashtable<Long, Long> getMaxUserOrderId (long idTienda) throws SQLException
     {
         String query = String.format("SELECT ID_PEDIDO, ID_USUARIO FROM PEDIDOS AS P " + "WHERE p1.ID_PEDIDO = (SELECT MAX(ID_PEDIDO) FROM PEDIDOS "
                 + "WHERE ID_USUARIO = P.ID_USUARIO)" + " AND ID_TIENDA = %s", idTienda);
