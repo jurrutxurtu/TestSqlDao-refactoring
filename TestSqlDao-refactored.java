@@ -83,7 +83,7 @@ public class TestSqlDao
      * Obtiene los datos del usuario y pedido con el pedido de mayor importe
      * para la tienda dada
      */
-    public PedidoDeUsuarioDto getUserMaxOrder(long idTienda, long userId, long orderId, String name, String address) throws Exception
+    public PedidoDeUsuarioDto getUserMaxOrder(long idTienda) throws Exception
     {
         String query = String.format("SELECT U.ID_USUARIO, P.ID_PEDIDO, MAX(P.TOTAL), U.NOMBRE, U.DIRECCION FROM PEDIDOS AS P "
                 + "INNER JOIN USUARIOS AS U ON P.ID_USUARIO = U.ID_USUARIO WHERE P.ID_TIENDA = %", idTienda);
